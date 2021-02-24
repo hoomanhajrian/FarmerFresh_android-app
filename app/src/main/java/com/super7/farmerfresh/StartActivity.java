@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 
 public class StartActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class StartActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.splash);
 
         handler=new Handler();
@@ -24,7 +26,7 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },1500);
+        },3000);
 
     }
 }
