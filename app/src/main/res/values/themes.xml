@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.FarmerFresh" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/Pri_Green_1</item>
-        <item name="colorPrimaryVariant">@color/Pri_Green_2</item>
+        <item name="colorPrimary">@color/Pri_Green_2</item>
+        <item name="colorPrimaryVariant">@color/Pri_Green_1</item>
         <item name="colorOnPrimary">@color/back_white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/Sec_green</item>
