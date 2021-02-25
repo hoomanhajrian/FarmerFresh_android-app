@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".OnboardingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="428dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="FarmerFresh helps you to :"
+            android:textAlignment="center"
+            android:textColor="@color/Pri_Green_2"
+            android:textSize="@dimen/size_h1" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="426dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            app:srcCompat="@drawable/ic_browse" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="Browse variery of fresh products"
+            android:textColor="@color/Pri_Green_2"
+            android:textSize="@dimen/size_h1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="You can browse the variety of fresh products and can find the farm most closest to your location"
+            android:textColor="@color/Sec_black_2"
+            android:textSize="@dimen/size_h2" />
+
+        <Button
+            android:id="@+id/nextButton1"
+            android:layout_width="@dimen/start_button_width"
+            android:layout_height="@dimen/start_button_height"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Next" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
