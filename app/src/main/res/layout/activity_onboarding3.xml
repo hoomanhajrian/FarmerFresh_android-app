@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="40dp"
         tools:layout_editor_absoluteX="236dp"
         tools:layout_editor_absoluteY="428dp">
 
@@ -28,7 +29,7 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
-            android:layout_height="426dp"
+            android:layout_height="330dp"
             android:layout_weight="1"
             android:textAlignment="center"
             app:srcCompat="@drawable/ic_delivery" />
@@ -61,7 +62,6 @@
             android:layout_width="@dimen/start_button_width"
             android:layout_height="@dimen/start_button_height"
             android:layout_gravity="center"
-            android:layout_weight="1.5"
             android:gravity="center"
             android:text="Start" />
 

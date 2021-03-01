@@ -1,6 +1,5 @@
 package com.super7.farmerfresh;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,7 +21,7 @@ public class StartActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(StartActivity.this,OnboardingActivity.class);
+                Intent intent=new Intent(StartActivity.this, OnboardingActivity.class);
                 startActivity(intent);
                 finish();
             }
