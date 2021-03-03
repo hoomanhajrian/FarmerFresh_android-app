@@ -18,6 +18,7 @@ import com.super7.farmerfresh.AuthActivity;
 import com.super7.farmerfresh.MainActivity;
 import com.super7.farmerfresh.OnboardingActivity;
 import com.super7.farmerfresh.R;
+import com.super7.farmerfresh.StartActivity;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -36,7 +37,7 @@ public class PlaceholderFragment extends Fragment {
         return fragment;
     }
 
-    private Button signInBtn;
+    public Button signInBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,17 +67,18 @@ public class PlaceholderFragment extends Fragment {
             }
         }
         return rootView;
-    }
+    };
 
-//    @Override
-//    public void onViewCreated(View view, Bundle savedInstanceState) {
-//        super.onViewCreated(view, savedInstanceState);
-//        Button signInBtn = (Button) view.findViewById(R.id.login);
-//        signInBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//    }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Button signInBtn =  (Button) getView().findViewById(R.id.login);
+
+        signInBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }
