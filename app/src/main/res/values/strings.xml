@@ -5,11 +5,24 @@
     <string name="splash_subtitle_1">Reap,</string>
     <string name="splash_subtitle_2">What You</string>
     <string name="splash_subtitle_3">Sow!</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
     <string name="welcome">Welcome</string>
     <string name="title_activity_auth">Auth</string>
     <string name="tab_text_1">Sign In</string>
     <string name="tab_text_2">Sign Up</string>
+
+    <!-- TODO: Tab Title -->
+    <string name="tab_home">Home</string>
+    <string name="tab_orders">Orders</string>
+    <string name="tab_profile">Profile</string>
+
+    <!-- TODO: Home Screen-->
+    <string name="search">Search</string>
+
+    <!-- TODO: Orders Screen -->
+    <string name="pending_tab">Pending</string>
+    <string name="completed_tab">Completed</string>
+
+    <!-- TODO: Profile Screen -->
+
 </resources>

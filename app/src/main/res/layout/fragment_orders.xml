@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_white"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/back_white"
+        android:gravity="center"
+        android:text="@string/pending_tab"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:id="@+id/btn_pending"
+        android:background="@color/Pri_Green_1"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/Sec_black"
+        android:gravity="center"
+        android:text="@string/completed_tab"
+        android:textSize="16sp"
+        android:id="@+id/btn_completed"
+        android:textStyle="bold"
+        android:background="@drawable/bg_round_green_border"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/order_container"/>
+
+</LinearLayout>

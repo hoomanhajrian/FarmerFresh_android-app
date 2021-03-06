@@ -10,4 +10,6 @@
     <color name="back_cream">#F3F4D3</color>
     <color name="back_green">#c6dc93</color>
     <color name="back_white">#fff</color>
+    <color name="grey">#B6B5B5</color>
+    <color name="lightGrey">#FAF8F8</color>
 </resources>
