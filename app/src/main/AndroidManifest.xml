@@ -32,6 +32,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".ui.orderDetails.ActivityOrderDetails"
+            android:label="Order Details" />
+
     </application>
 
 </manifest>
