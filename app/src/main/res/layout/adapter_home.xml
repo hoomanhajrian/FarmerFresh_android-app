@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/small_padding">
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginTop="10dp"
-    android:id="@+id/parent_view"
-    android:background="@drawable/bg_round_grey_border">
+    android:layout_height="150dp"
+    android:id="@+id/parent_view">
 
     <ImageView
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="150dp"
         android:scaleType="fitXY"
         app:layout_constraintHorizontal_bias="0"
         android:src="@drawable/farmsmall"
         android:id="@+id/iv_farm"
-        android:layout_marginLeft="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,21 +41,25 @@
             android:layout_height="wrap_content"
             android:text="Stark farms"
             android:textColor="@color/Sec_black"
-            android:textSize="17sp"
+            android:textSize="@dimen/size_normal"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unknown road surey"
+            android:text="123, Unknown road, Surrey"
+            android:layout_marginTop="@dimen/small_padding"
             android:textColor="@color/grey"
-            android:textSize="14sp" />
+            android:textSize="@dimen/size_h2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stark farms"
+            android:text="BC Y5W 3U7"
             android:textColor="@color/grey"
-            android:textSize="14sp" />
+            android:textSize="@dimen/size_h2" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
