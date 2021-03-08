@@ -1,6 +1,7 @@
 package com.super7.farmerfresh.ui.order.pending;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.super7.farmerfresh.R;
+import com.super7.farmerfresh.ui.orderDetails.ActivityOrderDetails;
+import com.super7.farmerfresh.ui.product.ActivityProductList;
 
 public class AdapterPendingOrder extends RecyclerView.Adapter<AdapterPendingOrder.MyViewHolder> {
     Context context;
@@ -28,6 +31,13 @@ public class AdapterPendingOrder extends RecyclerView.Adapter<AdapterPendingOrde
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.parent_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, ActivityOrderDetails.class));
+            }
+        });
+
 //        if (position%2==0){
 //            bgRound(holder.parent_view,context.getResources().getColor(R.color.lightGrey));
 //        }else{
