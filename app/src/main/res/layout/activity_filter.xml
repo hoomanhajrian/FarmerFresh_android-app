@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.filter.ActivityFilter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+     <LinearLayout
+        android:id="@+id/select_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/basic_padding"
+        android:layout_margin="@dimen/basic_padding"
+        android:background="@drawable/bg_round_green_border">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_padding"
+            android:textColor="@color/Sec_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/product_highlight"
+            android:text="Set radius (miles)" />
+
+        <SeekBar
+            android:id="@+id/seekBar5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_round_green_border"
+            android:padding="@dimen/basic_padding"
+            android:layout_marginTop="@dimen/basic_padding"
+            android:layout_margin="@dimen/basic_padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/basic_padding"
+                android:textColor="@color/Sec_black"
+                android:textStyle="bold"
+                android:textSize="@dimen/product_highlight"
+                android:text="Select category" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetables"
+                    android:layout_marginLeft="@dimen/basic_padding"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meat"
+                    android:layout_marginLeft="@dimen/basic_padding"
+                    android:enabled="false"
+                    />
+            </LinearLayout>
+
+            <!--            <Button-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="More Options"-->
+            <!--                android:layout_marginLeft="@dimen/basic_padding"-->
+            <!--                />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/basic_padding"
+            android:layout_margin="@dimen/basic_padding"
+            android:background="@drawable/bg_round_green_border">
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/basic_padding"
+            android:textColor="@color/Sec_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/product_highlight"
+            android:text="Select products" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oranges"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kiwi"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avocado"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banana"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cherries"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blueberries"
+            android:textSize="@dimen/product_list"
+            android:backgroundTint="@color/Pri_Green_1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/basic_padding">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/basic_padding"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/basic_padding"
+            android:text="Apply" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

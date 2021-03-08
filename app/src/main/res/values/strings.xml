@@ -15,6 +15,7 @@
     <string name="tab_home">Home</string>
     <string name="tab_orders">Orders</string>
     <string name="tab_profile">Profile</string>
+    <string name="tab_cart">Cart</string>
 
     <!-- TODO: Home Screen-->
     <string name="search">Search</string>
@@ -23,6 +24,8 @@
     <string name="pending_tab">Pending</string>
     <string name="completed_tab">Completed</string>
 
-    <!-- TODO: Profile Screen -->
+    <!-- TODO: Product List Screen -->
+    <string name="product_heading">What we offer:</string>
+
 
 </resources>

@@ -1,6 +1,7 @@
 package com.super7.farmerfresh.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.super7.farmerfresh.R;
+import com.super7.farmerfresh.ui.product.ActivityProductList;
 
 public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder>  {
     Context context;
@@ -31,6 +33,13 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull AdapterHome.MyViewHolder holder, int position) {
         holder.ivFarm.setClipToOutline(true);
+        holder.parent_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context,ActivityProductList.class));
+            }
+        });
+
         bgRound(holder.ivFarm);
     }
 
