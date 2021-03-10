@@ -10,6 +10,8 @@
     <string name="title_activity_auth">Auth</string>
     <string name="tab_text_1">Sign In</string>
     <string name="tab_text_2">Sign Up</string>
+    <string name="google_button">Sign in with Google</string>
+
 
     <!-- TODO: Tab Title -->
     <string name="tab_home">Home</string>
