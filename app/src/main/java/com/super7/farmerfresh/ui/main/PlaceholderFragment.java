@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.super7.farmerfresh.AuthActivity;
+import com.super7.farmerfresh.GoogleSignInActivity;
 import com.super7.farmerfresh.MainActivity;
 import com.super7.farmerfresh.OnboardingActivity;
 import com.super7.farmerfresh.R;
@@ -69,10 +70,14 @@ public class PlaceholderFragment extends Fragment {
         return rootView;
     };
 
+
+
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Button signInBtn =  (Button) getView().findViewById(R.id.login);
+        Button googleSingInBtn =  (Button) getView().findViewById(R.id.googleSingInBtn);
+
 
         signInBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -80,5 +85,12 @@ public class PlaceholderFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+//        googleSingInBtn.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent googleSignIn = new Intent(getContext(), GoogleSignInActivity.class);
+//                startActivity(googleSignIn);
+//            }
+//        });
     }
 }
