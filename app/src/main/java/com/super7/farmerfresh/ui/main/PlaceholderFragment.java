@@ -69,28 +69,4 @@ public class PlaceholderFragment extends Fragment {
         }
         return rootView;
     };
-
-
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        Button signInBtn =  (Button) getView().findViewById(R.id.login);
-        Button googleSingInBtn =  (Button) getView().findViewById(R.id.googleSingInBtn);
-
-
-        signInBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-//        googleSingInBtn.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent googleSignIn = new Intent(getContext(), GoogleSignInActivity.class);
-//                startActivity(googleSignIn);
-//            }
-//        });
-    }
 }
