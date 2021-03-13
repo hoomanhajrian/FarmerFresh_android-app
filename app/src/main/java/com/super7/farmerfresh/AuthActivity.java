@@ -88,12 +88,12 @@ public class AuthActivity extends AppCompatActivity {
     public void updateUI(GoogleSignInAccount account){
 
         if(account != null){
-            Toast.makeText(this,"U Signed In successfully" + account.getDisplayName(),Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Welcome " + account.getDisplayName(),Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
 
         }else {
-            Toast.makeText(this,"U Didnt signed in",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Sorry, try again later!",Toast.LENGTH_LONG).show();
         }
 
     }
