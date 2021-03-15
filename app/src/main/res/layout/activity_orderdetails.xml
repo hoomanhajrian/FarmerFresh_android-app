@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -107,7 +108,7 @@
         app:layout_constraintEnd_toStartOf="@+id/date_of_order"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date_of_order"
-        app:srcCompat="@drawable/apple" />
+        app:srcCompat="@drawable/applesmall" />
 
     <TextView
         android:id="@+id/textView28"
@@ -186,6 +187,7 @@
         android:text="Completed"
         android:textColor="@color/Sec_orange"
         android:textSize="16sp"
+        android:layout_marginTop="@dimen/basic_padding"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView21"
         app:layout_constraintStart_toStartOf="@+id/textView21" />
