@@ -19,6 +19,7 @@
 
     <!-- TODO: Home Screen-->
     <string name="search">Search</string>
+    <string name="home_heading">Farms Around You:</string>
 
     <!-- TODO: Orders Screen -->
     <string name="pending_tab">Pending</string>

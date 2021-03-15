@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="Pri_Green_1">#29600b</color>
-    <color name="Pri_Green_2">#7ca20a</color>
+    <color name="Pri_Green_2">#819e00</color>
+    <color name="Sec_red">#C4192D</color>
     <color name="Sec_green">#7CA20A</color>
     <color name="Sec_yellow">#FACE2C</color>
     <color name="Sec_black">#35331A</color>
-    <color name="Sec_orange">#FFAC00</color>
+    <color name="Sec_orange">#FFAD00</color>
     <color name="Sec_black_2">#000</color>
     <color name="back_cream">#F3F4D3</color>
     <color name="back_green">#c6dc93</color>
     <color name="back_white">#fff</color>
     <color name="grey">#B6B5B5</color>
+    <color name="darkGrey">#717171</color>
     <color name="lightGrey">#FAF8F8</color>
 </resources>
