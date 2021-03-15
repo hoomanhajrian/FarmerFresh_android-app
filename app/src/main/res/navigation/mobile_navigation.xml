@@ -25,8 +25,8 @@
 
     <fragment
         android:id="@+id/tab_profile"
-        android:name="com.super7.farmerfresh.ui.notifications.NotificationsFragment"
+        android:name="com.super7.farmerfresh.ui.profile.ProfileFragment"
         android:label="@string/tab_profile"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

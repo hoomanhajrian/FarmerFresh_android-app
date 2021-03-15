@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -52,7 +53,7 @@ public class AdapterPendingOrder extends RecyclerView.Adapter<AdapterPendingOrde
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        ConstraintLayout parent_view;
+        CardView parent_view;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             parent_view=itemView.findViewById(R.id.rl_parent);

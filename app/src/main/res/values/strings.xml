@@ -29,9 +29,14 @@
     <!-- TODO: Orders Screen -->
     <string name="pending_tab">Pending</string>
     <string name="completed_tab">Completed</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="payment_info">Payment Information</string>
+    <string name="total">Total</string>
 
     <!-- TODO: Product List Screen -->
     <string name="product_heading">What we offer:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
