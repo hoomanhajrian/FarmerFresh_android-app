@@ -1,30 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="303dp"
-        android:layout_height="@dimen/start_button_height"
-        android:layout_gravity="start"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="45dp"
-        android:onClick="signUp"
-        android:text="@string/tab_text_2"
-        android:textColor="@color/back_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
 
     <EditText
         android:id="@+id/name"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginStart="63dp"
         android:layout_marginTop="59dp"
         android:layout_marginEnd="45dp"
@@ -36,9 +24,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordUp"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginStart="64dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="45dp"
@@ -48,12 +37,13 @@
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/emailUp" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emailUp"
         android:layout_width="303dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginStart="64dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="45dp"
@@ -65,4 +55,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/login"
+        android:layout_width="303dp"
+        android:layout_height="@dimen/start_button_height"
+        android:layout_gravity="center"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="45dp"
+        android:onClick="signUp"
+        android:text="@string/tab_text_2"
+        android:textColor="@color/back_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordUp" />
+
+</LinearLayout>

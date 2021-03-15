@@ -18,4 +18,5 @@
     <dimen name="basic_padding">16dp</dimen>
     <dimen name="small_padding">10dp</dimen>
     <dimen name="divider">5dp</dimen>
+    <dimen name="SISO_padding">3dp</dimen>
 </resources>
