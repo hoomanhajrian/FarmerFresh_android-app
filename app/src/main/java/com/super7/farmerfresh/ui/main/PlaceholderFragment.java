@@ -10,6 +10,8 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.super7.farmerfresh.AuthActivity;
+import com.super7.farmerfresh.GoogleSignInActivity;
 import com.super7.farmerfresh.MainActivity;
 import com.super7.farmerfresh.R;
 
@@ -61,17 +63,4 @@ public class PlaceholderFragment extends Fragment {
         }
         return rootView;
     };
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        Button signInBtn =  (Button) getView().findViewById(R.id.login);
-
-        signInBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
 }
