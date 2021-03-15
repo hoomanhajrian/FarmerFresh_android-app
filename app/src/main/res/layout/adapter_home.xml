@@ -1,65 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/small_padding">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/small_padding"
+    android:background="@drawable/rounded_rectangle"
     android:id="@+id/parent_view">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:scaleType="fitXY"
-        app:layout_constraintHorizontal_bias="0"
         android:src="@drawable/farmsmall"
-        android:id="@+id/iv_farm"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/iv_farm"/>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/Pri_Green_2"
+        android:layout_marginLeft="@dimen/divider" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/iv_farm"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_gravity="center_vertical">
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/farm_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Stark farms"
             android:textColor="@color/Sec_black"
-            android:textSize="@dimen/size_normal"
-            android:textStyle="bold" />
+            android:textSize="@dimen/size_h1"
+            android:fontFamily="sans-serif-condensed-medium"/>
 
         <TextView
+            android:id="@+id/farm_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="123, Unknown road, Surrey"
-            android:layout_marginTop="@dimen/small_padding"
-            android:textColor="@color/grey"
-            android:textSize="@dimen/size_h2" />
+            android:hint="No Address"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/divider"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/size_normal" />
+
 
         <TextView
+            android:id="@+id/farm_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BC Y5W 3U7"
-            android:textColor="@color/grey"
+            android:hint="No Description"
+            android:layout_marginTop="@dimen/basic_padding"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/Sec_red"
             android:textSize="@dimen/size_h2" />
+
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</RelativeLayout>
