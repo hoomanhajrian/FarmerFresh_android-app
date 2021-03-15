@@ -7,10 +7,8 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.super7.farmerfresh.ui.orderDetails.ActivityOrderDetails;
 
-
-public class StartActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     Handler handler;
     @Override
@@ -23,7 +21,7 @@ public class StartActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(StartActivity.this, OnboardingActivity.class);
+                Intent intent=new Intent(SplashActivity.this, OnboardingActivity.class);
                 startActivity(intent);
                 finish();
             }
