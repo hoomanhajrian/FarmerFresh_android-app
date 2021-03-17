@@ -10,12 +10,10 @@
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="54dp"
+        android:layout_marginTop="30dp"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
@@ -25,12 +23,10 @@
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="54dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="54dp"
         android:hint="Password"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -41,12 +37,10 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/start_button_height"
         android:layout_gravity="center"
-        android:layout_marginStart="54dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="54dp"
         android:onClick="signIn"
         android:text="@string/tab_text_1"
         android:textColor="@color/back_white"
@@ -56,12 +50,10 @@
 
     <Button
         android:id="@+id/googleSingInBtn"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="54dp"
+        android:layout_marginTop="50dp"
         android:onClick="googleAuth"
         android:text="@string/google_button"
         android:textColor="@color/back_white"

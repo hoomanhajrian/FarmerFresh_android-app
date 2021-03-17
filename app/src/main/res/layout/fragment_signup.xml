@@ -10,14 +10,12 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginTop="30dp"
         android:hint="Name"
-        android:inputType="textEmailAddress"
+        android:inputType="textAutoComplete"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +23,10 @@
 
     <EditText
         android:id="@+id/passwordUp"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="45dp"
         android:hint="Password"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
@@ -41,33 +37,41 @@
 
     <EditText
         android:id="@+id/emailUp"
-        android:layout_width="303dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="45dp"
         android:hint="Email"
         android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="303dp"
+        android:id="@+id/signUp"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/start_button_height"
         android:layout_gravity="center"
-        android:layout_marginStart="63dp"
         android:layout_marginTop="45dp"
-        android:layout_marginEnd="45dp"
         android:onClick="signUp"
         android:text="@string/tab_text_2"
         android:textColor="@color/back_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordUp" />
+    <TextView
+        android:id="@+id/errorText2"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="176dp"
+        android:textColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp" />
 
 </LinearLayout>
