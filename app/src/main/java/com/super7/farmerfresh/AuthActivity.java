@@ -20,18 +20,20 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.super7.farmerfresh.ui.main.SectionsPagerAdapter;
 
+import java.lang.reflect.Type;
+
 public class AuthActivity extends AppCompatActivity {
 
     GoogleSignInClient googleSignInClient;
     String clientID = "799813312459-3808gnajesn12qqdrqphmenifgf8bgoa.apps.googleusercontent.com";
     int RC_SIGN_IN = 9001;
-    TextView user,pass,errorText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +54,46 @@ public class AuthActivity extends AppCompatActivity {
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-///V1/user/auth/reg
+///
     public void signUp(View v){
-        finish();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        TextView name = (TextView) findViewById(R.id.name);
+        TextView pass = (TextView) findViewById(R.id.passwordUp);
+        TextView email = (TextView) findViewById(R.id.emailUp);
+        TextView errorText = (TextView) findViewById(R.id.errorText2);
+
+        if (email.getText().toString().isEmpty() || pass.getText().toString().isEmpty() || name.getText().toString().isEmpty()) {
+            errorText.setText("Please Fill The Form!");
+        }
+        else{
+            // Instantiate the RequestQueue.
+            RequestQueue queue = Volley.newRequestQueue(this);
+            String url = "https://farmerfresh.ca/api/V1/user/auth/reg?name="+name.getText().toString()+"&email="+email.getText().toString()+"&pass="+pass.getText().toString();
+            Intent intent = new Intent(this, this.getClass());
+
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            if (response.equals("registered!")){
+                                errorText.setText("Successfully Registered!");
+                                name.setText("");
+                                email.setText("");
+                                pass.setText("");
+                            }else{
+                                errorText.setText("Something Went Wrong Please Try Again!");
+                            }
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    errorText.setText("Please Check Network Connection And Try Again!");
+                }
+            });
+
+// Add the request to the RequestQueue.
+            queue.add(stringRequest);
+
+        }
     }
 
     public void signIn(View v) {
@@ -65,26 +102,29 @@ public class AuthActivity extends AppCompatActivity {
         TextView errorText = findViewById(R.id.errorText);
 
         if (email.getText().toString().isEmpty() || pass.getText().toString().isEmpty()) {
-            errorText.setText("Please fill both email and password!");
+            errorText.setText("Please Fill Both Email And Password!");
         }
         else{
             // Instantiate the RequestQueue.
             RequestQueue queue = Volley.newRequestQueue(this);
-            String url = "https://farmerfresh.ca/api/V1/user/auth/approval?email=hoomanhajrian@gmail.com&pass=1234";
+            String url = "https://farmerfresh.ca/api/V1/user/auth/approval?email="+email.getText().toString()+"&pass="+pass.getText().toString();
             Intent intent = new Intent(this, MainActivity.class);
-// Request a string response from the provided URL.
+
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            // Display the first 500 characters of the response string.
-                            finish();
-                            startActivity(intent);
+                            if (response.equals(email.getText().toString())){
+                                finish();
+                                startActivity(intent);
+                            }else{
+                                errorText.setText("Wrong Email or Password!");
+                            }
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    errorText.setText("Wrong Email or Password!");
+                    errorText.setText("Please Check Network Connection And Try Again!");
                 }
             });
 
