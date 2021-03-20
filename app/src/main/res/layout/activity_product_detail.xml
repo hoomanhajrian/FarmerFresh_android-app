@@ -14,10 +14,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/product_detail"
+            android:id="@+id/pd_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/applesmall"
+            android:background="@drawable/default_image"
             />
 
     <LinearLayout
@@ -27,7 +27,7 @@
         android:padding="@dimen/basic_padding">
 
          <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/pd_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Apple"
@@ -37,7 +37,7 @@
              />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/pd_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ambrosia"
@@ -45,7 +45,7 @@
             android:textColor="@color/Sec_orange"/>
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/pd_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/basic_padding"
@@ -54,11 +54,11 @@
             android:textSize="@dimen/size_normal"
             />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nutrition (1 apple):" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView8"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Nutrition (1 apple):" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -68,92 +68,103 @@
             android:background="@color/lightGrey"
             android:layout_marginTop="@dimen/small_padding">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
             <TextView
+                android:id="@+id/pd_decr"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Carbs"
-                android:textSize="@dimen/size_h2"
+                android:textSize="@dimen/size_normal"
                 android:textColor="@color/Sec_black"
                 android:textStyle="bold"/>
 
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
 
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fat"
-                android:textSize="@dimen/size_h2"
-                android:textColor="@color/Sec_black"
-                android:textStyle="bold"/>
-
-
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Protein"
-                android:textSize="@dimen/size_h2"
-                android:textColor="@color/Sec_black"
-                android:textStyle="bold"/>
+<!--            <TextView-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Carbs"-->
+<!--                android:textSize="@dimen/size_h2"-->
+<!--                android:textColor="@color/Sec_black"-->
+<!--                android:textStyle="bold"/>-->
 
 
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cal."
-                android:textSize="@dimen/size_h2"
-                android:textColor="@color/Sec_black"
-                android:textStyle="bold"/>
-            </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Fat"-->
+<!--                android:textSize="@dimen/size_h2"-->
+<!--                android:textColor="@color/Sec_black"-->
+<!--                android:textStyle="bold"/>-->
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="34g"
-                    android:textSize="@dimen/size_h2"
-                    android:textColor="@color/Sec_black" />
+<!--            <TextView-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Protein"-->
+<!--                android:textSize="@dimen/size_h2"-->
+<!--                android:textColor="@color/Sec_black"-->
+<!--                android:textStyle="bold"/>-->
 
 
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0g"
-                    android:textSize="@dimen/size_h2"
-                    android:textColor="@color/Sec_black" />
+<!--            <TextView-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cal."-->
+<!--                android:textSize="@dimen/size_h2"-->
+<!--                android:textColor="@color/Sec_black"-->
+<!--                android:textStyle="bold"/>-->
+<!--            </LinearLayout>-->
 
 
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1g"
-                    android:textSize="@dimen/size_h2"
-                    android:textColor="@color/Sec_black" />
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="34g"-->
+<!--                    android:textSize="@dimen/size_h2"-->
+<!--                    android:textColor="@color/Sec_black" />-->
 
 
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="130"
-                    android:textSize="@dimen/size_h2"
-                    android:textColor="@color/Sec_black" />
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0g"-->
+<!--                    android:textSize="@dimen/size_h2"-->
+<!--                    android:textColor="@color/Sec_black" />-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="1g"-->
+<!--                    android:textSize="@dimen/size_h2"-->
+<!--                    android:textColor="@color/Sec_black" />-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="130"-->
+<!--                    android:textSize="@dimen/size_h2"-->
+<!--                    android:textColor="@color/Sec_black" />-->
+<!--            </LinearLayout>-->
+
         </LinearLayout>
 
 

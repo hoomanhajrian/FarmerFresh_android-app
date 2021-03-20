@@ -15,13 +15,14 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
 import com.super7.farmerfresh.R;
 import com.super7.farmerfresh.network.model.FarmListResponse;
 import com.super7.farmerfresh.ui.product.ActivityProductList;
 
 import java.util.List;
 
-public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder>  {
+public class  AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder>  {
 
     private List<FarmListResponse> farmList;
     private Context context;
@@ -64,6 +65,12 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull AdapterHome.MyViewHolder holder, int position) {
         holder.ivFarm.setClipToOutline(true);
+
+        if(farmList.get(position).getFarmImg()!=null){
+            // Load farm image
+            Picasso.with(context).load(farmList.get(position).getFarmImg()).into(holder.ivFarm);
+        }
+
         holder.name.setText(farmList.get(position).getFarmName());
         holder.description.setText("\""+ farmList.get(position).getFarmDescription() +"\"");
         holder.address.setText(farmList.get(position).getFarmAddress());
@@ -74,7 +81,7 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
             }
         });
 
-        //bgRound(holder.ivFarm);
+          //bgRound(holder.ivFarm);
     }
 
     @Override
@@ -83,14 +90,14 @@ public class AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder> 
     }
 
 
-//    private void bgRound(View view){
-//        GradientDrawable gradientDrawable = new GradientDrawable();
-//        gradientDrawable.setColor(Color.WHITE);
-//        gradientDrawable.setStroke(3,Color.GRAY);
-//        gradientDrawable.setCornerRadii(new float[] { 10, 10, 10, 10, 0, 0, 0, 0 });
-//
-////or setCornerRadius(gradientDrawable, 20f, 40f, 60f, 80f);
-//
-//        view.setBackground(gradientDrawable);
-//    }
+    private void bgRound(View view){
+        GradientDrawable gradientDrawable = new GradientDrawable();
+        gradientDrawable.setColor(view.getResources().getColor(R.color.Pri_Green_1));
+        gradientDrawable.setStroke(3,Color.GRAY);
+        gradientDrawable.setCornerRadii(new float[] { 10, 10, 10, 10, 0, 0, 0, 0 });
+
+        //setCornerRadius(gradientDrawable, 20f, 40f, 60f, 80f);
+
+        view.setBackground(gradientDrawable);
+    }
 }
