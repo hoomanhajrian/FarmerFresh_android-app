@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/divider"
+    app:cardElevation="@dimen/divider"
     android:layout_margin="@dimen/small_padding">
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="@dimen/small_padding"
-    android:background="@drawable/rounded_rectangle"
+    android:padding="2dp"
+    android:background="@drawable/bg_green_border"
     android:id="@+id/parent_view">
 
     <ImageView
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="150dp"
         android:scaleType="fitXY"
-        android:src="@drawable/farmsmall"
+        android:background="@drawable/default_image"
         android:id="@+id/iv_farm"/>
 
     <View
-        android:layout_width="2dp"
+        android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:background="@color/Pri_Green_2"
+        android:background="@color/back_green"
         android:layout_marginLeft="@dimen/divider" />
 
     <LinearLayout
@@ -71,4 +73,4 @@
     </LinearLayout>
 </LinearLayout>
 
-</RelativeLayout>
+</androidx.cardview.widget.CardView>

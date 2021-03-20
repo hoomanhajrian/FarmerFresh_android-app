@@ -1,6 +1,7 @@
 package com.super7.farmerfresh.network;
 
 import com.super7.farmerfresh.network.model.FarmListResponse;
+import com.super7.farmerfresh.network.model.ProductListResponse;
 
 import java.util.List;
 
@@ -14,8 +15,11 @@ public interface ApiInterface {
 //    @POST("/V1/user/auth/reg")
 //    Call<>
 
-    //Get farms list
+    // Get farms list
     @GET("V1/farms")
     Call<List<FarmListResponse>> getFarms();
 
+    // Get product list
+    @GET("V1/products")
+    Call<List<ProductListResponse>> getProduct();
 }

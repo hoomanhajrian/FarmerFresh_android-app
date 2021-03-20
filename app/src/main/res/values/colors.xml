@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Pri_Green_1">#29600b</color>
+<!--    <color name="Pri_Green_1">#29600b</color>-->
+    <color name="Pri_Green_1">#819e00</color>
     <color name="Pri_Green_2">#819e00</color>
     <color name="Sec_red">#C4192D</color>
     <color name="Sec_green">#7CA20A</color>

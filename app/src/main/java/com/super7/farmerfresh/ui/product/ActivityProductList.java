@@ -6,13 +6,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.super7.farmerfresh.R;
+import com.super7.farmerfresh.network.ApiClient;
+import com.super7.farmerfresh.network.ApiInterface;
+import com.super7.farmerfresh.network.model.FarmListResponse;
+import com.super7.farmerfresh.network.model.ProductListResponse;
 import com.super7.farmerfresh.ui.home.AdapterHome;
 
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class ActivityProductList extends AppCompatActivity {
+
     RecyclerView product_rv;
-    AdapterProduct adapterHome;
+    AdapterProduct adapterProduct;
+    List<ProductListResponse> productList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +36,32 @@ public class ActivityProductList extends AppCompatActivity {
     }
 
     private void initView(){
-        adapterHome = new AdapterProduct(this);
+        adapterProduct = new AdapterProduct(this,productList);
         product_rv.setHasFixedSize(true);
         product_rv.setLayoutManager(new GridLayoutManager(this,2));
-        product_rv.setAdapter(adapterHome);
+        getProductResponse();
     }
+
+    public void getProductResponse() {
+
+        ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+        Call<List<ProductListResponse>> call = apiService.getProduct();
+        call.enqueue(new Callback<List<ProductListResponse>>() {
+            @Override
+            public void onResponse(Call<List<ProductListResponse>> call, Response<List<ProductListResponse>> response) {
+                productList = response.body();
+                Log.d("TAG","Response = "+productList);
+                adapterProduct.setProductList(productList);
+                product_rv.setAdapter(adapterProduct);
+            }
+
+            @Override
+            public void onFailure(Call<List<ProductListResponse>> call, Throwable t) {
+                Log.d("TAG","Response = "+t.toString());
+            }
+        });
+
+    }
+
+
 }

@@ -27,7 +27,7 @@
                 android:layout_width="100dp"
                 android:layout_height="90dp"
                 android:scaleType="fitXY"
-                android:background="@drawable/bg_round_grey_border"
+                android:background="@drawable/bg_green_border"
                 android:padding="5dp"
                 android:src="@drawable/applesmall"
                 android:id="@+id/iv_farm"/>

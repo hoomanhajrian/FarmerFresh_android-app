@@ -23,6 +23,9 @@ public class FarmListResponse {
     @SerializedName("farm_description")
     @Expose
     private String farmDescription;
+    @SerializedName("farm_img")
+    @Expose
+    private String farmImg;
 
     public Long getFarmId() {
         return farmId;
@@ -72,4 +75,12 @@ public class FarmListResponse {
         this.farmDescription = farmDescription;
     }
 
+    public String getFarmImg() {
+        return farmImg;
+    }
+
+    public void setFarmImg(String farmImg) {
+        this.farmImg = farmImg;
+    }
+    
 }

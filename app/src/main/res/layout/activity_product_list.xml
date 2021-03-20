@@ -24,7 +24,7 @@
             android:text="@string/product_heading"
             android:textSize="@dimen/size_h1"
             android:textStyle="bold"
-            android:textColor="@color/Sec_black"
+            android:textColor="@color/Pri_Green_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/product_rv" />
