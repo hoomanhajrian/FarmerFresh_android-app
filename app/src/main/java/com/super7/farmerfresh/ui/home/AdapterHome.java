@@ -2,22 +2,20 @@ package com.super7.farmerfresh.ui.home;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 import com.super7.farmerfresh.R;
 import com.super7.farmerfresh.network.model.FarmListResponse;
+import com.super7.farmerfresh.ui.product.ActivityProductDetail;
 import com.super7.farmerfresh.ui.product.ActivityProductList;
 
 import java.util.List;
@@ -64,11 +62,12 @@ public class  AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull AdapterHome.MyViewHolder holder, int position) {
-        holder.ivFarm.setClipToOutline(true);
+
+        //holder.ivFarm.setClipToOutline(true);
 
         if(farmList.get(position).getFarmImg()!=null){
             // Load farm image
-            Picasso.with(context).load(farmList.get(position).getFarmImg()).into(holder.ivFarm);
+            Glide.with(context).load(farmList.get(position).getFarmImg()).into(holder.ivFarm);
         }
 
         holder.name.setText(farmList.get(position).getFarmName());
@@ -77,11 +76,13 @@ public class  AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder>
         holder.parent_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context,ActivityProductList.class));
+                Intent intent = new Intent(context, ActivityProductList.class);
+                intent.putExtra("farm_id",farmList.get(position).getFarmId());
+                intent.putExtra("farm_name",farmList.get(position).getFarmName());
+                context.startActivity(intent);
             }
         });
 
-          //bgRound(holder.ivFarm);
     }
 
     @Override
@@ -89,15 +90,4 @@ public class  AdapterHome extends RecyclerView.Adapter<AdapterHome.MyViewHolder>
         return farmList.size();
     }
 
-
-    private void bgRound(View view){
-        GradientDrawable gradientDrawable = new GradientDrawable();
-        gradientDrawable.setColor(view.getResources().getColor(R.color.Pri_Green_1));
-        gradientDrawable.setStroke(3,Color.GRAY);
-        gradientDrawable.setCornerRadii(new float[] { 10, 10, 10, 10, 0, 0, 0, 0 });
-
-        //setCornerRadius(gradientDrawable, 20f, 40f, 60f, 80f);
-
-        view.setBackground(gradientDrawable);
-    }
 }

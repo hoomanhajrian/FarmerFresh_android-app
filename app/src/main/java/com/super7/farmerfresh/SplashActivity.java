@@ -7,6 +7,8 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.super7.farmerfresh.ui.product.ActivityProductDetail;
+
 
 public class SplashActivity extends AppCompatActivity {
 

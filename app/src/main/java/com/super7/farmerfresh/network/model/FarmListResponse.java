@@ -7,7 +7,7 @@ public class FarmListResponse {
 
     @SerializedName("farm_id")
     @Expose
-    private Long farmId;
+    private String farmId;
     @SerializedName("farm_name")
     @Expose
     private String farmName;
@@ -27,11 +27,11 @@ public class FarmListResponse {
     @Expose
     private String farmImg;
 
-    public Long getFarmId() {
+    public String getFarmId() {
         return farmId;
     }
 
-    public void setFarmId(Long farmId) {
+    public void setFarmId(String farmId) {
         this.farmId = farmId;
     }
 
