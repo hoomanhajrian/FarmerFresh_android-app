@@ -184,7 +184,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Pick Up"
+                    android:text="Pick Up (10am-6pm)"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:textColor="@color/Pri_Green_1"
                     android:textSize="@dimen/size_normal" />
@@ -195,13 +195,16 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Delivery"
+                    android:clickable="false"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:textColor="@color/Pri_Green_1"
                     android:textSize="@dimen/size_normal" />
 
                 <Button
+                    android:id="@+id/pickup_schedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="pick_schedule"
                     android:text="Pick Schedule" />
 
             </LinearLayout>

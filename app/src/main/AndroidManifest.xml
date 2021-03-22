@@ -13,7 +13,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmerFresh">
-        <activity android:name=".ui.cart.ActivityCartDetail"></activity>
+        <activity android:name=".ui.cart.ActivityConfirmationOrder"
+            android:noHistory="true"></activity>
+        <activity android:name=".ui.cart.ActivityCartDetail" android:noHistory="true"/>
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name">
@@ -26,10 +28,11 @@
         <activity android:name=".GoogleSignInActivity" />
         <activity
             android:name=".OauthActivity"
+            android:noHistory="true"
             android:label="@string/app_name" />
-        <activity android:name=".ui.product.ActivityProductDetail" />
-        <activity android:name=".ui.filter.ActivityFilter" />
-        <activity android:name=".ui.product.ActivityProductList" />
+        <activity android:name=".ui.product.ActivityProductDetail" android:noHistory="true" />
+        <activity android:name=".ui.filter.ActivityFilter" android:noHistory="true" />
+        <activity android:name=".ui.product.ActivityProductList" android:noHistory="true"/>
         <activity
             android:name=".AuthActivity"
             android:label="@string/title_activity_auth"
@@ -40,9 +43,9 @@
             android:noHistory="true" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name" android:noHistory="true"/>
         <activity
-            android:name=".ui.orderDetails.ActivityOrderDetails"
+            android:name=".ui.orderDetails.ActivityOrderDetails" android:noHistory="true"
             android:label="Order Details" />
     </application>
 
