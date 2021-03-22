@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:id="@+id/parent_cons"
     android:orientation="vertical"
+    android:background="@drawable/ic_splash"
     tools:context=".ui.cart.ActivityConfirmationOrder">
 
     <Toolbar
@@ -33,30 +34,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:padding="@dimen/basic_padding"
+        android:padding="30dp"
         android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:padding="@dimen/basic_padding"
-        android:src="@drawable/farmsmall"
-        />
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/ic_splash"-->
+<!--        />-->
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_vertical|center"
-        android:textSize="@dimen/size_h1"
-        android:text="Hurry"
+        android:textSize="50dp"
+        android:text="Hurry!"
+        android:textColor="@color/Pri_Green_1"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed-medium"
         />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center"
+            android:textSize="25dp"
+            android:text="Your order has been confirmed"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed-medium"
+            />
+
         <Button
             android:id="@+id/continueShopping"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_margin="30dp"
             android:text="Continue Shopping"
             />
 
