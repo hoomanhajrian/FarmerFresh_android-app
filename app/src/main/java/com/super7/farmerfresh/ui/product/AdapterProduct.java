@@ -14,8 +14,9 @@ import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 import com.super7.farmerfresh.R;
+import com.super7.farmerfresh.network.model.FarmsProductResponse;
 import com.super7.farmerfresh.network.model.ProductListResponse;
 import com.super7.farmerfresh.ui.home.AdapterHome;
 import com.super7.farmerfresh.ui.orderDetails.ActivityOrderDetails;
@@ -25,15 +26,16 @@ import java.util.List;
 public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.MyviewHolder> {
 
      Context context;
-     List<ProductListResponse> productList;
+     List<FarmsProductResponse> productList;
+     String farmName;
 
-    public AdapterProduct(Context context, List<ProductListResponse> productList) {
+    public AdapterProduct(Context context, List<FarmsProductResponse> productList, String farmName) {
         this.context = context;
         this.productList = productList;
-
+        this.farmName = farmName;
     }
 
-    public void setProductList(List<ProductListResponse> productList) {
+    public void setProductList(List<FarmsProductResponse> productList) {
         this.productList = productList;
         notifyDataSetChanged();
     }
@@ -66,7 +68,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.MyviewHo
 
         if(productList.get(position).getProductImg()!=null){
             // Load farm image
-            Picasso.with(context).load(productList.get(position).getProductImg()).into(holder.product_image);
+            Glide.with(context).load(productList.get(position).getProductImg()).into(holder.product_image);
         }
 
         holder.product_name.setText(productList.get(position).getProductName());
@@ -77,6 +79,7 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.MyviewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ActivityProductDetail.class);
+                intent.putExtra("product_farm",farmName);
                 intent.putExtra("product_img",productList.get(position).getProductImg());
                 intent.putExtra("product_name",productList.get(position).getProductName());
                 intent.putExtra("product_cat",productList.get(position).getProductCategory());

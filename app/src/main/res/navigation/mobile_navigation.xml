@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/tab_cart"
-        android:name="com.super7.farmerfresh.ui.notifications.NotificationsFragment"
+        android:name="com.super7.farmerfresh.ui.cart.CartFragment"
         android:label="@string/tab_cart"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_cart" />
 
     <fragment
         android:id="@+id/tab_profile"

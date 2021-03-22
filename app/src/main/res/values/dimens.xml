@@ -18,6 +18,7 @@
     <dimen name="basic_padding">16dp</dimen>
     <dimen name="small_padding">10dp</dimen>
     <dimen name="divider">5dp</dimen>
+    <dimen name="product_heading">30sp</dimen>
 
     <dimen name="icon_size">30sp</dimen>
 </resources>

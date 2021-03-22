@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.product.ActivityProductDetail">
+    android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/Pri_Green_2"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farm Name"
+            android:layout_marginLeft="@dimen/icon_size"
+            android:textSize="@dimen/size_h1"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/back_white"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/pd_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple"
+            android:textSize="@dimen/product_heading"
+            android:layout_marginTop="@dimen/basic_padding"
+            android:layout_marginLeft="@dimen/basic_padding"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/Sec_black"/>
+
+        <TextView
+            android:id="@+id/pd_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ambrosia"
+            android:layout_marginTop="@dimen/small_padding"
+            android:layout_marginLeft="@dimen/basic_padding"
+            android:textSize="@dimen/size_normal"
+            android:textStyle="bold"
+            android:textColor="@color/Sec_orange"/>
+
+
         <ImageView
             android:id="@+id/pd_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:layout_marginTop="@dimen/small_padding"
             android:background="@drawable/default_image"
             />
 
@@ -26,147 +80,61 @@
         android:orientation="vertical"
         android:padding="@dimen/basic_padding">
 
-         <TextView
-            android:id="@+id/pd_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Apple"
-             android:textSize="@dimen/size_h1"
-             android:textStyle="bold"
-             android:textColor="@color/Sec_black"
-             />
-
-        <TextView
-            android:id="@+id/pd_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ambrosia"
-            android:textSize="@dimen/size_h2"
-            android:textColor="@color/Sec_orange"/>
-
         <TextView
             android:id="@+id/pd_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/basic_padding"
             android:text="$1.13"
+            android:textColor="@color/Sec_black"
             android:textStyle="bold"
             android:textSize="@dimen/size_normal"
             />
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView8"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Nutrition (1 apple):" />-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/basic_padding"
+            android:layout_marginBottom="@dimen/basic_padding"
+            android:background="@color/grey"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/basic_padding"
-            android:background="@color/lightGrey"
-            android:layout_marginTop="@dimen/small_padding">
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/product_desc"
+                android:textSize="@dimen/size_h1"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textColor="@color/Pri_Green_2"/>
 
             <TextView
                 android:id="@+id/pd_decr"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif-condensed"
+                android:fontFamily="sans-serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/small_padding"
+                android:layout_marginTop="@dimen/small_padding"
                 android:textSize="@dimen/size_normal"
+                android:text="vdfvdfgdf"
                 android:textColor="@color/Sec_black"
                 android:textStyle="bold"/>
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal">-->
-
-<!--            <TextView-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Carbs"-->
-<!--                android:textSize="@dimen/size_h2"-->
-<!--                android:textColor="@color/Sec_black"-->
-<!--                android:textStyle="bold"/>-->
-
-
-<!--            <TextView-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Fat"-->
-<!--                android:textSize="@dimen/size_h2"-->
-<!--                android:textColor="@color/Sec_black"-->
-<!--                android:textStyle="bold"/>-->
-
-
-<!--            <TextView-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Protein"-->
-<!--                android:textSize="@dimen/size_h2"-->
-<!--                android:textColor="@color/Sec_black"-->
-<!--                android:textStyle="bold"/>-->
-
-
-<!--            <TextView-->
-<!--                android:layout_weight="1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Cal."-->
-<!--                android:textSize="@dimen/size_h2"-->
-<!--                android:textColor="@color/Sec_black"-->
-<!--                android:textStyle="bold"/>-->
-<!--            </LinearLayout>-->
-
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal">-->
-
-<!--                <TextView-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="34g"-->
-<!--                    android:textSize="@dimen/size_h2"-->
-<!--                    android:textColor="@color/Sec_black" />-->
-
-
-<!--                <TextView-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="0g"-->
-<!--                    android:textSize="@dimen/size_h2"-->
-<!--                    android:textColor="@color/Sec_black" />-->
-
-
-<!--                <TextView-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="1g"-->
-<!--                    android:textSize="@dimen/size_h2"-->
-<!--                    android:textColor="@color/Sec_black" />-->
-
-
-<!--                <TextView-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="130"-->
-<!--                    android:textSize="@dimen/size_h2"-->
-<!--                    android:textColor="@color/Sec_black" />-->
-<!--            </LinearLayout>-->
-
         </LinearLayout>
 
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/basic_padding"
+            android:layout_marginBottom="@dimen/basic_padding"
+            android:background="@color/grey"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -177,54 +145,62 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/basic_padding"
-                android:textColor="@color/Sec_black"
+                android:text="Select Quantity:"
+                android:textSize="@dimen/size_h1"
+                android:fontFamily="sans-serif-condensed"
                 android:textStyle="bold"
-                android:layout_weight="1"
-                android:textSize="@dimen/product_highlight"
-                android:text="Select Quantity:" />
+                android:textColor="@color/Pri_Green_2"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/basic_padding"
+                android:layout_marginTop="@dimen/basic_padding"
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/decrease"
                     android:layout_width="40dp"
                     android:layout_height="50dp"
                     android:textSize="@dimen/size_normal"
-                    android:text="+"/>
+                    android:onClick="decreaseItem"
+                    android:text="-"/>
 
-                <EditText
+                <TextView
+                    android:id="@+id/pd_quantity"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:text="1"
                     android:gravity="center_horizontal"
                     android:textSize="@dimen/size_normal"
                     />
 
                 <Button
+                    android:id="@+id/increase"
                     android:layout_width="40dp"
                     android:layout_height="50dp"
                     android:textSize="@dimen/size_normal"
-                    android:text="-"/>
+                    android:onClick="increaseItem"
+                    android:text="+"/>
+
             </LinearLayout>
 
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/add_cart_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/basic_padding"
             android:text="Add to Cart"
             android:layout_margin="@dimen/basic_padding"
-            android:paddingBottom="100dp"
             />
 
     </LinearLayout>
 
     </LinearLayout>
 
+    </ScrollView>
 
-</ScrollView>
+</LinearLayout>

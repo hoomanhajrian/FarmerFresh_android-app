@@ -12,13 +12,14 @@
         android:title="@string/tab_orders" />
 
     <item
+        android:id="@+id/tab_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="@string/tab_cart" />
+
+    <item
         android:id="@+id/tab_profile"
         android:icon="@drawable/ic_profile"
         android:title="@string/tab_profile" />
 
 
-    <item
-        android:id="@+id/tab_cart"
-        android:icon="@drawable/ic_cart"
-        android:title="@string/tab_cart" />
 </menu>
