@@ -1,7 +1,9 @@
 package com.super7.farmerfresh.ui.cart;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.super7.farmerfresh.R;
@@ -29,6 +32,7 @@ public class ActivityCartDetail extends AppCompatActivity{
     ImageView productImg;
     String name,quantity,price,image;
     int totalPrice;
+    Button pickup_schedule;
     int minteger = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public class ActivityCartDetail extends AppCompatActivity{
         productTotalPrice=findViewById(R.id.pDetails_totalPrice);
         productTotal=findViewById(R.id.pDetails_total_Tax);
         productImg=findViewById(R.id.pDetails_pimg);
+        pickup_schedule=findViewById(R.id.pickup_schedule);
         getIntentValues();
     }
 
@@ -79,5 +84,48 @@ public class ActivityCartDetail extends AppCompatActivity{
     }
     private void display(int number) {
         productQnty.setText("" + number);
+    }
+
+    public void pick_schedule(View view) {
+        dialogBox();
+    }
+
+
+    private void dialogBox() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        // Set the message show for the Alert time
+        builder.setMessage("You can pick your item on anyday from 10am-6pm.");
+        // Set Alert Title
+        builder.setTitle("Hurry!");
+        builder.setCancelable(false);
+        builder.setPositiveButton(
+                "OK",
+                new DialogInterface
+                        .OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        startActivity(new Intent(ActivityCartDetail.this,ActivityConfirmationOrder.class));
+                        //finish()
+                    }
+                });
+        builder
+                .setNegativeButton(
+                        "Cancel",
+                        new DialogInterface
+                                .OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                finish();
+                            }
+                        });
+
+        // Create the Alert dialog
+        AlertDialog alertDialog = builder.create();
+        // Show the Alert Dialog box
+        alertDialog.show();
+
     }
 }
