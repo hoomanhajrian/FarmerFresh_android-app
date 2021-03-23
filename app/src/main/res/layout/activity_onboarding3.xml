@@ -31,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="330dp"
             android:layout_weight="1"
+            android:contentDescription="@string/onBoarding_image"
             android:textAlignment="center"
             app:srcCompat="@drawable/ic_delivery" />
 
@@ -40,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="Get your order at your doorsteps"
+            android:text="@string/onBoarding_thirdPage_text"
             android:textColor="@color/Pri_Green_2"
             android:textSize="@dimen/size_h1"
             android:textStyle="bold" />
@@ -53,7 +54,7 @@
             android:layout_marginRight="30dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="You can order the most suitable product from the convenience of your home and get the order right at your doorsteps. We value your time the most."
+            android:text="@string/onBoarding_thirdPageDescription_text"
             android:textColor="@color/Sec_black_2"
             android:textSize="@dimen/size_h2" />
 
@@ -63,7 +64,7 @@
             android:layout_height="@dimen/start_button_height"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Start" />
+            android:text="@string/onBoarding_button_start" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Farmer Fresh</string>
+<!--    splash screen -->
     <string name="splash_title_1">Farmer</string>
     <string name="splash_title_2">Fresh</string>
     <string name="splash_subtitle_1">Reap,</string>
@@ -8,15 +9,26 @@
     <string name="splash_image1_description">splash screen background</string>
     <string name="splash_image2_description">logo</string>
 
+    <!--on boarding screen-->
+    <string name="onBoarding_title">FarmerFresh helps you to :</string>
+    <string name="onBoarding_firstPage_text">Browse variety of fresh products</string>
+    <string name="onBoarding_firstPageDescription_text">You can browse the variety of fresh products and can find the farm most closest to your location</string>
+    <string name="onBoarding_secondPage_text">Get the authenticated products</string>
+    <string name="onBoarding_secondPageDescription_text">You are assured to get 100% authenticated pure and fresh organic products from the farms of the registered farmers.</string>
+    <string name="onBoarding_thirdPage_text">Get your order at your doorsteps</string>
+    <string name="onBoarding_thirdPageDescription_text">You can order the most suitable product from the convenience of your home and get the order right at your doorsteps. We value your time the most.</string>
+    <string name="onBoarding_image">illustration</string>
+    <string name="onBoarding_button_next">Next</string>
+    <string name="onBoarding_button_start">Start</string>
 
     <string name="welcome">Welcome</string>
     <string name="title_activity_auth">Auth</string>
-    <string name="tab_text_1">Sign In</string>
-    <string name="tab_text_2">Sign Up</string>
+    <string name="tab_text_1"><b>Sign In</b></string>
+    <string name="tab_text_2"><b>Sign Up</b></string>
     <string name="google_button">Sign in with Google</string>
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
-    <string name="name_hint">Full Name</string>
+    <string name="name_hint">Name</string>
     <string name="password_confirm_hint">Confirm Password</string>
 
     <!-- Tab Title -->

@@ -13,16 +13,18 @@
         android:layout_height="83dp"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
+        android:paddingEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="match_parent"
+            android:layout_width="221dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:paddingStart="40dp"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
         <LinearLayout
@@ -90,7 +92,10 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/back_white" />
+            android:background="@color/back_white"
+            app:tabIndicatorHeight="5dp"
+            app:tabSelectedTextColor="@color/Sec_black_2"
+            app:tabTextColor="@color/signInDefault" />
     </androidx.viewpager.widget.ViewPager>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -23,7 +23,7 @@
             android:layout_gravity="center"
             android:layout_weight="1.5"
             android:gravity="center"
-            android:text="FarmerFresh helps you to :"
+            android:text="@string/onBoarding_title"
             android:textAlignment="center"
             android:textColor="@color/Pri_Green_2"
             android:textSize="@dimen/size_h1" />
@@ -33,6 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="330dp"
             android:layout_weight="1"
+            android:contentDescription="@string/onBoarding_image"
             android:textAlignment="center"
             app:srcCompat="@drawable/ic_browse" />
 
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="Browse variery of fresh products"
+            android:text="@string/onBoarding_firstPage_text"
             android:textColor="@color/Pri_Green_2"
             android:textSize="@dimen/size_h1"
             android:textStyle="bold" />
@@ -51,10 +52,10 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="You can browse the variety of fresh products and can find the farm most closest to your location"
+            android:padding="16dp"
+            android:text="@string/onBoarding_firstPageDescription_text"
             android:textColor="@color/Sec_black_2"
             android:textSize="@dimen/size_h2" />
 
@@ -63,9 +64,9 @@
             android:layout_width="@dimen/start_button_width"
             android:layout_height="@dimen/start_button_height"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_marginTop="@dimen/basic_padding"
-            android:text="Next" />
+            android:gravity="center"
+            android:text="@string/onBoarding_button_next" />
 
     </LinearLayout>
 

@@ -15,4 +15,5 @@
     <color name="grey">#B6B5B5</color>
     <color name="darkGrey">#717171</color>
     <color name="lightGrey">#FAF8F8</color>
+    <color name="signInDefault">#B1B1B1</color>
 </resources>
