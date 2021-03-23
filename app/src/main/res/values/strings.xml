@@ -5,6 +5,9 @@
     <string name="splash_subtitle_1">Reap,</string>
     <string name="splash_subtitle_2">What You</string>
     <string name="splash_subtitle_3">Sow!</string>
+    <string name="splash_image1_description">splash screen background</string>
+    <string name="splash_image2_description">logo</string>
+
 
     <string name="welcome">Welcome</string>
     <string name="title_activity_auth">Auth</string>
@@ -42,7 +45,7 @@
     <string name="product_desc">Product Description</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
 
 
 </resources>
