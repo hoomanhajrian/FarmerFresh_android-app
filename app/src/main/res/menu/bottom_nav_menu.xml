@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/tab_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/tab_home" />
-
+        android:icon="@drawable/home_selector"
+        android:title="" />
     <item
         android:id="@+id/tab_order"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/tab_orders" />
-
+        android:icon="@drawable/orders_selector"
+        android:title="" />
     <item
         android:id="@+id/tab_cart"
-        android:icon="@drawable/ic_cart"
-        android:title="@string/tab_cart" />
-
+        android:icon="@drawable/cart_selector"
+        android:title="" />
     <item
         android:id="@+id/tab_profile"
-        android:icon="@drawable/ic_profile"
-        android:title="@string/tab_profile" />
-
-
+        android:icon="@drawable/profile_selector"
+        android:title="" />
 </menu>
