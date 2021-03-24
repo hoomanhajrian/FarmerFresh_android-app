@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/basic_padding">
+    android:padding="@dimen/basic_padding">
 
     <EditText
+        android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="@string/search"
-        android:padding="@dimen/small_padding"
-        android:id="@+id/et_search"
-        android:background="@drawable/bg_green_border"
         android:layout_marginHorizontal="@dimen/basic_padding"
+        android:background="@drawable/bg_green_border"
+        android:drawableRight="@drawable/ic_search"
         android:drawableTint="@color/Sec_black"
-        android:drawableRight="@drawable/ic_search"/>
+        android:hint="@string/search"
+        android:padding="@dimen/small_padding" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,33 +26,34 @@
             android:id="@+id/heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/small_padding"
             android:layout_weight="1"
-            android:text="@string/home_heading"
-            android:textSize="@dimen/size_h1"
             android:fontFamily="sans-serif-condensed"
-            android:textStyle="bold"
-            android:textColor="@color/Pri_Green_2"/>
-
-<!--        <TextView-->
-<!--            android:id="@+id/title"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:fontFamily="cursive"-->
-<!--            android:textColor="@color/Pri_Green_1"-->
-<!--            android:textSize="@dimen/icon_size"-->
-<!--            android:textStyle="bold" />-->
+            android:padding="@dimen/small_padding"
+            android:text="@string/home_heading"
+            android:textColor="@color/Sec_green"
+            android:textSize="@dimen/size_h1"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/filter"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_gravity="end|center_vertical"
             android:layout_height="40dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_weight="1"
             android:src="@drawable/ic_filter" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:padding="@dimen/small_padding"
+        android:text="@string/home_description"
+        android:textColor="@color/Sec_black_2"
+        android:textSize="@dimen/size_h2"
+        android:textStyle="normal" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_farm"

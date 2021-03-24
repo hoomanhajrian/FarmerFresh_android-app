@@ -22,50 +22,45 @@
         android:background="@drawable/default_image"
         android:id="@+id/iv_farm"/>
 
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="@color/back_green"
-        android:layout_marginLeft="@dimen/divider" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
         android:layout_marginLeft="@dimen/small_padding"
-        android:layout_gravity="center_vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/small_padding">
 
         <TextView
             android:id="@+id/farm_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
             android:text="Stark farms"
             android:textColor="@color/Sec_black"
-            android:textSize="@dimen/size_h1"
-            android:fontFamily="sans-serif-condensed-medium"/>
+            android:textSize="@dimen/size_h2" />
 
         <TextView
             android:id="@+id/farm_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="No Address"
-            android:ellipsize="end"
-            android:maxLines="1"
             android:layout_marginTop="@dimen/divider"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-condensed"
+            android:hint="No Address"
+            android:maxLines="1"
             android:textColor="@color/darkGrey"
-            android:textSize="@dimen/size_normal" />
+            android:textSize="@dimen/size_h2" />
 
 
         <TextView
             android:id="@+id/farm_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="No Description"
             android:layout_marginTop="@dimen/basic_padding"
             android:fontFamily="sans-serif-condensed"
+            android:hint="No Description"
             android:textColor="@color/Sec_red"
-            android:textSize="@dimen/size_h2" />
+            android:textSize="@dimen/size_h3" />
 
 
     </LinearLayout>

@@ -40,6 +40,8 @@
     <!-- Home Screen-->
     <string name="search">Search</string>
     <string name="home_heading">Farms Around You:</string>
+    <string name="home_description">Here is the list of your farms most near to your location.  You can search the farm and can browse their products for order.</string>
+
 
     <!-- Orders Screen -->
     <string name="pending_tab">Pending</string>
