@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/back_white"
-    android:orientation="vertical">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:padding="@dimen/small_padding">
 
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:textColor="@color/back_white"
-        android:gravity="center"
-        android:text="@string/pending_tab"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:id="@+id/btn_pending"
-        android:background="@color/Pri_Green_1"
-        android:layout_weight="1"/>
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:text="@string/orders_title"
+        android:textColor="@color/Pri_Green_2"
+        android:textSize="@dimen/size_h1"
+        android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:textColor="@color/Sec_black"
-        android:gravity="center"
-        android:text="@string/completed_tab"
-        android:textSize="16sp"
-        android:textAllCaps="true"
-        android:id="@+id/btn_completed"
-        android:textStyle="bold"
-        android:background="@drawable/bg_round_green_border"
-        android:layout_weight="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/btn_pending"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Pri_Green_1"
+            android:gravity="center"
+            android:text="@string/pending_tab"
+            android:textAllCaps="true"
+            android:textColor="@color/back_white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_completed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_green_border"
+            android:gravity="center"
+            android:text="@string/completed_tab"
+            android:textAllCaps="true"
+            android:textColor="@color/Sec_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <FrameLayout
+        android:id="@+id/order_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/order_container"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

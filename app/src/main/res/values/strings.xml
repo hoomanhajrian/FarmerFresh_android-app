@@ -49,6 +49,7 @@
     <string name="order_summary">Order Summary</string>
     <string name="payment_info">Payment Information</string>
     <string name="total">Total</string>
+    <string name="orders_title">List Of Orders</string>
 
     <!-- Product List Screen -->
     <string name="product_heading">The best products we serve:</string>
