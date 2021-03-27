@@ -94,9 +94,9 @@ public class ActivityCartDetail extends AppCompatActivity{
     private void dialogBox() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         // Set the message show for the Alert time
-        builder.setMessage("You can pick your item on anyday from 10am-6pm.");
+        builder.setMessage("Are you sure with this schedule?");
         // Set Alert Title
-        builder.setTitle("Hurry!");
+        builder.setTitle("Confirmation");
         builder.setCancelable(false);
         builder.setPositiveButton(
                 "OK",
