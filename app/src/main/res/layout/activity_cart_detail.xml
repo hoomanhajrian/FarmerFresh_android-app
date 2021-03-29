@@ -18,89 +18,90 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@color/lightGrey"
+                android:orientation="horizontal"
                 android:padding="@dimen/basic_padding">
 
                 <ImageView
+                    android:id="@+id/pDetails_pimg"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:scaleType="fitXY"
                     android:background="@drawable/bg_green_border"
                     android:padding="5dp"
-                    android:src="@drawable/applesmall"
-                    android:id="@+id/pDetails_pimg"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/applesmall" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/small_padding">
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/pDetails_pname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed-medium"
-                        android:text="Apple Ambrosia"
-                        android:textSize="@dimen/size_normal"
                         android:padding="@dimen/divider"
+                        android:text="Apple Ambrosia"
                         android:textColor="@color/Sec_black"
+                        android:textSize="@dimen/size_normal"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/divider"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="@dimen/divider">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Order Date: "
-                            android:textSize="@dimen/size_h2"
-                            android:textColor="@color/Sec_black"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Order Date: "
+                            android:textColor="@color/Sec_black"
+                            android:textSize="@dimen/size_h2" />
 
                         <TextView
                             android:id="@+id/orderDate"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="25-02-2021"
-                            android:gravity="end"
-                            android:textSize="@dimen/size_h2"
-                            android:textColor="@color/darkGrey"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:gravity="end"
+                            android:text="25-02-2021"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/size_h2" />
                     </LinearLayout>
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/divider"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="@dimen/divider">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed-medium"
                             android:text="Price: "
                             android:textColor="@color/Sec_black"
-                            android:textSize="@dimen/size_h2"
-                            android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:textSize="@dimen/size_h2" />
 
                         <TextView
                             android:id="@+id/pDetails_price"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="$25.00"
-                            android:textSize="@dimen/size_h2"
-                            android:gravity="end"
-                            android:textColor="@color/darkGrey"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:gravity="end"
+                            android:text="$25.00"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/size_h2" />
 
                     </LinearLayout>
 
@@ -118,51 +119,50 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/small_padding"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/small_padding">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Quantity: "
                     android:layout_weight="1"
-                    android:textColor="@color/Sec_black"
-                    android:textSize="@dimen/size_h2"
-                    android:fontFamily="sans-serif-condensed-medium" />
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Quantity (in lbs)"
+                    android:textColor="@color/Pri_Green_1"
+                    android:textSize="@dimen/size_normal" />
 
 
                 <Button
                     android:id="@+id/decrease"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:padding="0dp"
                     android:onClick="decreaseProduct"
-                    android:textSize="@dimen/size_normal"
-                    android:text="-"/>
+                    android:padding="0dp"
+                    android:text="-"
+                    android:textSize="@dimen/size_normal" />
 
                 <TextView
                     android:id="@+id/pDetails_quantity"
                     android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:gravity="center_horizontal"
-                    android:textSize="@dimen/size_normal"
-                    />
+                    android:textSize="@dimen/size_normal" />
 
                 <Button
                     android:id="@+id/increase"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:padding="0dp"
                     android:onClick="increaseProduct"
-                    android:textSize="@dimen/size_normal"
-                    android:text="+"/>
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textSize="@dimen/size_normal" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/grey"
-                android:padding="@dimen/small_padding"/>
+                android:padding="@dimen/small_padding" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
                 android:padding="@dimen/small_padding"
                 android:text="Select Option"
                 android:textColor="@color/Pri_Green_1"
-                android:textSize="@dimen/size_h1"/>
+                android:textSize="@dimen/size_h1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -183,9 +183,10 @@
                     android:id="@+id/pickup_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:checked="true"
                     android:layout_gravity="center_horizontal"
-                    android:text="Pick Up (10am-6pm)"
                     android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Pick Up (10am-6pm)"
                     android:textColor="@color/Pri_Green_1"
                     android:textSize="@dimen/size_normal" />
 
@@ -194,27 +195,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Delivery"
                     android:clickable="false"
                     android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Delivery"
                     android:textColor="@color/Pri_Green_1"
                     android:textSize="@dimen/size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/small_padding"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/pickup_schedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:onClick="pick_schedule"
                     android:text="Pick Schedule" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/pickupDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/Pri_Green_1"
+                    android:textSize="@dimen/size_normal" />
 
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/grey"
-                android:padding="@dimen/small_padding"/>
+                android:padding="@dimen/small_padding" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -223,7 +242,7 @@
                 android:padding="@dimen/small_padding"
                 android:text="@string/payment_info"
                 android:textColor="@color/Pri_Green_1"
-                android:textSize="@dimen/size_h1"/>
+                android:textSize="@dimen/size_h1" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -234,63 +253,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="@dimen/small_padding">
+                    android:layout_marginLeft="@dimen/small_padding"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/divider"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="@dimen/divider">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Price: "
-                            android:textSize="@dimen/size_h2"
-                            android:textColor="@color/Sec_black"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Price: "
+                            android:textColor="@color/Sec_black"
+                            android:textSize="@dimen/size_h2" />
 
                         <TextView
                             android:id="@+id/pDetails_totalPrice"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="$25.00"
-                            android:textSize="@dimen/size_h2"
-                            android:gravity="end"
-                            android:textColor="@color/darkGrey"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:gravity="end"
+                            android:text="$25.00"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/size_h2" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/divider"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:padding="@dimen/divider">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Taxes: "
-                            android:textSize="@dimen/size_h2"
-                            android:textColor="@color/Sec_black"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:text="Taxes: "
+                            android:textColor="@color/Sec_black"
+                            android:textSize="@dimen/size_h2" />
 
                         <TextView
                             android:id="@+id/taxes"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Free"
-                            android:textSize="@dimen/size_h2"
-                            android:gravity="end"
-                            android:textColor="@color/darkGrey"
                             android:layout_weight="1"
-                            android:fontFamily="sans-serif-condensed-medium" />
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:gravity="end"
+                            android:text="Free"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="@dimen/size_h2" />
 
                     </LinearLayout>
 
@@ -301,7 +320,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/grey"
-                android:padding="@dimen/small_padding"/>
+                android:padding="@dimen/small_padding" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -312,33 +331,34 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed-medium"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:padding="@dimen/small_padding"
                     android:text="@string/total"
                     android:textColor="@color/Pri_Green_1"
-                    android:textSize="@dimen/size_h1"/>
+                    android:textSize="@dimen/size_h1" />
 
                 <TextView
                     android:id="@+id/pDetails_total_Tax"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif"
                     android:layout_weight="1"
-                    android:padding="@dimen/small_padding"
+                    android:fontFamily="serif"
                     android:gravity="end"
+                    android:padding="@dimen/small_padding"
                     android:textColor="@color/Pri_Green_1"
                     android:textSize="@dimen/size_h1"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <Button
+                android:id="@+id/order_checkout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="View all items"
-                android:layout_marginTop="@dimen/basic_padding"
+                android:onClick="orderCompleted"
                 android:layout_margin="@dimen/basic_padding"
-                />
+                android:layout_marginTop="@dimen/basic_padding"
+                android:text="Checkout Item" />
         </LinearLayout>
 
 

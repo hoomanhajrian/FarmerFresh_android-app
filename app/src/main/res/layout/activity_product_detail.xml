@@ -145,7 +145,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select Quantity:"
+                android:text="Quantity (in lbs)"
                 android:textSize="@dimen/size_h1"
                 android:fontFamily="sans-serif-condensed"
                 android:textStyle="bold"
