@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/rl">
         <TextView
+            android:id="@+id/order_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Order:12345-4545"
@@ -29,6 +30,7 @@
             android:textStyle="bold"
             android:textSize="16sp"/>
         <TextView
+            android:id="@+id/order_schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="27-Feb-2021"
@@ -44,12 +46,14 @@
         android:layout_marginTop="20dp"
         android:layout_alignBottom="@id/rl">
         <TextView
+            android:id="@+id/order_farm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sunrise Farm"
             android:textColor="@color/Sec_black"
             android:textSize="16sp"/>
         <TextView
+            android:id="@+id/order_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$50"

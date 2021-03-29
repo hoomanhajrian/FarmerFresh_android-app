@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.super7.farmerfresh.R;
+import com.super7.farmerfresh.ui.order.completed.FragmentCompletedOrders;
 import com.super7.farmerfresh.ui.order.pending.FragmentPendingOrders;
 
 public class OrderFragment extends Fragment {
@@ -43,7 +44,7 @@ public class OrderFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                replaceFragment(new FragmentPendingOrders());
+                replaceFragment(new FragmentCompletedOrders());
                 btn_completed.setBackground(getResources().getDrawable(R.color.Pri_Green_1));
                 btn_pending.setBackground(getResources().getDrawable(R.drawable.bg_round_green_border));
                 btn_pending.setTextColor(getResources().getColor(R.color.Sec_black));

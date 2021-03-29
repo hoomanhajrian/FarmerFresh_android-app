@@ -82,6 +82,7 @@ public class AdapterCart extends RecyclerView.Adapter<AdapterCart.MyViewHolder> 
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context,ActivityCartDetail.class);
+                intent.putExtra("pd_farm",cartList.get(position).getFarmName());
                 intent.putExtra("pd_Img",cartList.get(position).getProductImg());
                 intent.putExtra("pd_name",cartList.get(position).getProductName());
                 intent.putExtra("pd_price",cartList.get(position).getProductPrice());

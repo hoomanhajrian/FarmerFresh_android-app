@@ -21,6 +21,7 @@ import com.super7.farmerfresh.network.ApiClient;
 import com.super7.farmerfresh.network.ApiInterface;
 import com.super7.farmerfresh.network.model.AddCartResponse;
 import com.super7.farmerfresh.ui.cart.CartFragment;
+import com.super7.farmerfresh.ui.customDialog.CustomDialogClass;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,7 +53,11 @@ public class ActivityProductDetail extends AppCompatActivity implements View.OnC
         add_cart_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialogBox();
+                 dialogBox();
+
+//                CustomDialogClass cdd=new CustomDialogClass(ActivityProductDetail.this);
+//                cdd.show();
+
             }
         });
         getIntentData();
@@ -111,6 +116,7 @@ public class ActivityProductDetail extends AppCompatActivity implements View.OnC
     }
 
     private void dialogBox() {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         // Set the message show for the Alert time
         builder.setMessage("Your item has been successfully added to the cart!");

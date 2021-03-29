@@ -4,18 +4,18 @@ import com.super7.farmerfresh.network.model.AddCartResponse;
 import com.super7.farmerfresh.network.model.CartListResponse;
 import com.super7.farmerfresh.network.model.FarmListResponse;
 import com.super7.farmerfresh.network.model.FarmsProductResponse;
+import com.super7.farmerfresh.network.model.OrderCheckoutResponse;
+import com.super7.farmerfresh.network.model.OrderPendingResponse;
 import com.super7.farmerfresh.network.model.ProductListResponse;
 import com.super7.farmerfresh.network.model.RemoveCartItemResponse;
 
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
@@ -50,4 +50,14 @@ public interface ApiInterface {
     @POST("V1/removefromcart")
     Call<RemoveCartItemResponse> deleteCartItem(@Field("cart_id") String cart_id);
 
+    // Order Completed
+    @FormUrlEncoded
+    @POST("V1/setorder")
+    Call<OrderCheckoutResponse> orderCompleted(@Field("order_date") String order_date, @Field("order_schedule") String order_schedule,
+                                               @Field("user_id") String user_id, @Field("order_quantity") String order_quantity,
+                                               @Field("farm_name") String farm_name, @Field("price") String price);
+
+    // Pending Orders
+    @GET("V1/showorders")
+    Call<List<OrderPendingResponse>> getPendingOrders(@Query("userId") String userId);
 }
