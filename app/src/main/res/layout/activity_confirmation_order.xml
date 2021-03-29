@@ -5,9 +5,10 @@
     android:id="@+id/parent_cons"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_order_confirmation_background"
+    android:background="@drawable/doodle_order"
     android:orientation="vertical"
     tools:context=".ui.cart.ActivityConfirmationOrder">
+
 
     <Toolbar
         android:id="@+id/toolbar"
@@ -30,7 +31,6 @@
             android:textStyle="bold" />
 
     </Toolbar>
-
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -65,8 +65,8 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical|center"
             android:text="Your order has been confirmed"
-            android:textSize="25dp"
             android:textColor="@color/Sec_black"
+            android:textSize="25dp"
             android:textStyle="normal" />
 
         <TextView

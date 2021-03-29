@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/doodle">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="@dimen/divider"
-        android:layout_margin="@dimen/small_padding">
+        android:layout_margin="@dimen/small_padding"
+        app:cardCornerRadius="@dimen/divider">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -183,8 +184,8 @@
                     android:id="@+id/pickup_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
                     android:layout_gravity="center_horizontal"
+                    android:checked="true"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Pick Up (10am-6pm)"
                     android:textColor="@color/Pri_Green_1"
@@ -206,8 +207,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="@dimen/small_padding"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="@dimen/small_padding">
 
                 <Button
                     android:id="@+id/pickup_schedule"
@@ -222,8 +223,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="end"
                     android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="end"
                     android:textColor="@color/Pri_Green_1"
                     android:textSize="@dimen/size_normal" />
 
@@ -355,9 +356,9 @@
                 android:id="@+id/order_checkout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:onClick="orderCompleted"
                 android:layout_margin="@dimen/basic_padding"
                 android:layout_marginTop="@dimen/basic_padding"
+                android:onClick="orderCompleted"
                 android:text="Checkout Item" />
         </LinearLayout>
 
