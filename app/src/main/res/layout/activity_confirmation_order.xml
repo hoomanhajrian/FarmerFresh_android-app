@@ -5,10 +5,16 @@
     android:id="@+id/parent_cons"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/doodle_order"
     android:orientation="vertical"
     tools:context=".ui.cart.ActivityConfirmationOrder">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/doodle_order"
+        tools:layout_editor_absoluteX="30dp" />
 
     <Toolbar
         android:id="@+id/toolbar"
@@ -23,9 +29,9 @@
             android:id="@+id/farm_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/icon_size"
+            android:layout_marginStart="@dimen/icon_size"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Order Placed"
+            android:text="@string/order_placed"
             android:textColor="@color/back_white"
             android:textSize="@dimen/size_h1"
             android:textStyle="bold" />
@@ -36,11 +42,11 @@
         android:id="@+id/linearLayout5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         android:orientation="vertical"
         android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <!--    <ImageView-->
@@ -54,9 +60,9 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical|center"
-            android:text="Hurray!"
+            android:text="@string/hurray"
             android:textColor="@color/Pri_Green_2"
-            android:textSize="50dp"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
@@ -64,19 +70,18 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center_vertical|center"
-            android:text="Your order has been confirmed"
+            android:text="@string/your_order_has_been_confirmed"
             android:textColor="@color/Sec_black"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/orderId"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center_vertical|center"
-            android:text="Order: #34212"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="normal" />
 
         <Button
@@ -85,7 +90,7 @@
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:layout_margin="30dp"
-            android:text="Continue Shopping" />
+            android:text="@string/continue_shopping" />
 
     </LinearLayout>
 

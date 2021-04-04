@@ -60,6 +60,10 @@
     <string name="product_desc">Product Description</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hurray">Hurray!</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="your_order_has_been_confirmed">Your order has been confirmed</string>
+    <string name="order_placed">Order Placed</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
