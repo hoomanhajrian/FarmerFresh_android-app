@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class FarmsProductResponse {
     @SerializedName("product_id")
     @Expose
-    private Long productId;
+    private String productId;
     @SerializedName("product_name")
     @Expose
     private String productName;
@@ -30,13 +30,13 @@ public class FarmsProductResponse {
     private String productImg;
     @SerializedName("order_order_id")
     @Expose
-    private Long orderOrderId;
+    private String orderOrderId;
 
-    public Long getProductId() {
+    public String getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
@@ -96,11 +96,11 @@ public class FarmsProductResponse {
         this.productImg = productImg;
     }
 
-    public Long getOrderOrderId() {
+    public String getOrderOrderId() {
         return orderOrderId;
     }
 
-    public void setOrderOrderId(Long orderOrderId) {
+    public void setOrderOrderId(String orderOrderId) {
         this.orderOrderId = orderOrderId;
     }
 }
