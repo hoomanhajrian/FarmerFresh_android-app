@@ -8,13 +8,14 @@ https://developer.android.com/studio
 ## Usage
 Using this application to develop this idea for college school project.
 ```
-visit us at
+visit us at https://farmerfresh.ca/
 ```
 
 ## Contributing
+```Contributing
 Hooman Hajarian
 Navneet Kaur 
 Jauan Santos
-
+```
 
 ## License
