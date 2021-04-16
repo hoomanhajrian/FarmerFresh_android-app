@@ -2,7 +2,7 @@
 Install Android Studio to be able to run this application.
 
 ```downloadlink
-https://developer.android.com/studio
+(https://developer.android.com/studio)
 ```
 
 ## Usage
@@ -19,3 +19,4 @@ Jauan Santos
 ```
 
 ## License
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
