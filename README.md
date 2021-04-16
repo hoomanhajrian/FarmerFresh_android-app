@@ -1,8 +1,8 @@
 ## Installation
 Install Android Studio to be able to run this application.
 
-```bash
-pip install foobar
+```link
+https://developer.android.com/studio
 ```
 
 ## Usage
