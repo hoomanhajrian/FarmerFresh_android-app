@@ -1,18 +1,14 @@
 ## Installation
 Install Android Studio to be able to run this application.
 
-```link
+```downloadlink
 https://developer.android.com/studio
 ```
 
 ## Usage
 Using this application to develop this idea for college school project.
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```
+visit us at
 ```
 
 ## Contributing
