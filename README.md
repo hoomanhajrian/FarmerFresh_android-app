@@ -3,7 +3,6 @@ Install Android Studio to be able to run this application.
 
 ```link
 https://developer.android.com/studio
-ln -s "$dirname"/system/extensions/ext.lg_data_matrix_ext.php "$ee_path"/"$ee_system_folder"/extensions/ext.lg_data_matrix_ext.php
 ```
 
 ## Usage
