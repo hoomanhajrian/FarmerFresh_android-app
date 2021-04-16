@@ -20,3 +20,5 @@ Jauan Santos
 
 ## License
 
+## About App
+This Android app will let you find the closest farms around you and put an order from their products 
